@@ -1,0 +1,30 @@
+{
+  "name": "rest-on-seating-app",
+  "version": "1.0.0",
+  "description": "rest on shopping app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node rest-on-backend/server",
+    "server": "nodemon rest-on-backend/server",
+    "client": "npm start --prefix rest-on-frontend-ui",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node rest-on-backend/seeder",
+    "data:destroy": "node rest-on-backend/seeder -d"
+  },
+  "author": "Imran Abdul",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "install": "^0.13.0",
+    "mongoose": "^6.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
